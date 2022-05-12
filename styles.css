@@ -1,0 +1,9 @@
+* {
+    font-family: Verdana, Tahoma, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+#desimaalit {
+    float: inline-start;
+}
