@@ -23,7 +23,7 @@
     </header>
 
     <div class="container" id="valitsin">
-        <select class="form-select" aria-label="Default select example">
+        <select class="form-select" aria-label="Valitse muunnos">
             <option selected>Valitse muunnos</option>
             <option value="C-F">Celsius -> Fahrenheit</option>
             <option value="F-C">Fahrenheit -> Celsius</option>
@@ -36,21 +36,25 @@
 
     <div class="container" id="form">
         <h3>Syötä lämpötila</h3>
-        <input type="number" placeholder="Syötä arvo...">
+        <input type="number" name="nayttoalue" placeholder="Syötä arvo...">
         <button class="button" id="button">MUUNNA</button>    
     </div>
 
     <div class="container" id="desimaalit">
-        <input type="radio" id="yksiDesimaali">
-        <label for="yksiDesimaali">1 desimaali</label>
-        <input type="radio" id="kaksiDesimaalia">
-        <label for="kaksiDesimaalia">2 desimaalia</label>
-        <input type="radio" id="kolmeDesimaalia">
+        <input type="radio" name="valittu" id="yksiDesimaali" checked>
+        <label for="yksiDesimaali">1 desimaali</label><br>
+        <input type="radio" name="valittu" id="kaksiDesimaalia">
+        <label for="kaksiDesimaalia">2 desimaalia</label><br>
+        <input type="radio" name="valittu" id="kolmeDesimaalia">
         <label for="kolmeDesimaalia">3 desimaalia</label>
     </div>
     
-    <div class="container" id="vastaus">
-        <h2>Lämpötila on:</h2>
+    <div class="container" id="tulos">
+        <h2>Tulos</h2>
+        <p id="vastausalue"></p>
     </div>
+
+    <script src="main.js"></script>
+    
 </body>
 </html>
