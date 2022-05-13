@@ -10,9 +10,9 @@ for (const valittuDesimaali of valitutDesimaalit) {
         break;
     }
 }
-if (valittuKoko === ) {
+// if (valittuKoko === ) {
     
-}
+// }
 
 
 document.getElementById("button").addEventListener("click", muunna);
