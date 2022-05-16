@@ -2,8 +2,31 @@
     font-family: Verdana, Tahoma, sans-serif;
     margin: 0px;
     padding: 0px;
+    font-size: large;
+}
+
+body {
+    background-color: gainsboro;
+
+}
+
+.container {
+    padding: 2%;
+}
+
+#otsikko {
+    text-align: center;
+    color: white;
+    background-color: rgb(93, 199, 7);
+    padding-top: 30px;
+    padding-bottom: 3px;
+    border-bottom: 5px blue solid;
 }
 
 #desimaalit {
     float: inline-start;
+}
+
+#tulos {
+    background-color: aqua;
 }

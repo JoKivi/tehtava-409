@@ -17,14 +17,13 @@
 <body>
 
     <header>
-        <div class="container" id="otsikko">
+        <div class="container-fluid" id="otsikko">
             <h1>Lämpötilamuunnin</h1>
         </div>
     </header>
 
     <div class="container" id="valitsin">
         <select class="form-select" aria-label="Valitse muunnos">
-            <option selected>Valitse muunnos</option>
             <option value="C-F">Celsius -> Fahrenheit</option>
             <option value="F-C">Fahrenheit -> Celsius</option>
             <option value="C-K">Celsius -> Kelvin</option>
@@ -37,7 +36,7 @@
     <div class="container" id="form">
         <h3>Syötä lämpötila</h3>
         <input type="number" name="nayttoalue" placeholder="Syötä arvo...">
-        <button class="button" id="button">MUUNNA</button>    
+        <button class="btn btn-primary " id="button">MUUNNA</button>    
     </div>
 
     <div class="container" id="desimaalit">
@@ -51,7 +50,7 @@
     
     <div class="container" id="tulos">
         <h2>Tulos</h2>
-        <p id="vastausalue"></p>
+        <h1 id="vastausalue"></h1>
     </div>
 
     <script src="main.js"></script>

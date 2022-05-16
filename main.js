@@ -21,14 +21,14 @@ document.getElementById("button").addEventListener("click", muunna);
 function muunna(event) {
     event.preventDefault();
     const muunnos = document.querySelector(".form-select").value;
-    const syote = document.querySelector("input[name='nayttoalue']").value;
+    const syote = parseFloat(document.querySelector("input[name='nayttoalue']").value);
 
     switch (muunnos) {
         case 'C-F':
             if (syote < alarajaCelsius) {
                 alerting();
             }
-            tulo = syote*1.8+32;
+            tulo = syote*1.800+32;
             tuloste();
             break;
 
@@ -36,7 +36,7 @@ function muunna(event) {
             if (syote < alarajaFahrenheit) {
                 alerting();
             }
-            tulo = (syote-32)/1.8;
+            tulo = (syote-32)/1.800;
             tuloste();
             break;
 
@@ -44,7 +44,7 @@ function muunna(event) {
             if (syote < alarajaCelsius) {
                 alerting();
             }
-            tulo = syote+273.15;
+            tulo = syote+273.150;
             tuloste();
             break; 
         
@@ -52,7 +52,7 @@ function muunna(event) {
             if (syote < alarajaKelvin) {
                 alerting();
             }
-            tulo = syote-273.15;
+            tulo = syote-273.150;
             tuloste();
             break;
 
@@ -60,7 +60,7 @@ function muunna(event) {
             if (syote < alarajaFahrenheit) {
                 alerting();
             }
-            tulo = (syote+459.67)*(5/9);
+            tulo = (syote+459.670)*(5/9);
             tuloste();
             break; 
 
@@ -68,7 +68,7 @@ function muunna(event) {
             if (syote < alarajaKelvin) {
                 alerting();
             }
-            tulo = 1.8*(syote-273.15)+32;
+            tulo = 1.8*(syote-273.150)+32;
             tuloste();
             break;
 
@@ -84,10 +84,16 @@ function alerting() {
 }
 
 function tuloste() {
-    if (valittuKoko) {
-        
+    let tuloDesimaali;
+    let desimaaliValue = document.querySelector("input[name='valittu']:checked").value;
+
+    if (desimaaliValue === "1") {
+        tuloDesimaali = tulo.toFixed(1);
+    } if (desimaaliValue === "2") {
+        tuloDesimaali = tulo.toFixed(2);
+    } if (desimaaliValue === "3") {
+        tuloDesimaali = tulo.toFixed(3);
     }
-    
-    document.getElementById("vastausalue").innerHTML = tulo;
+    document.getElementById("vastausalue").innerHTML = tuloDesimaali;
 }
 
