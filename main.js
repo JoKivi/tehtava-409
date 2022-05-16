@@ -76,7 +76,6 @@ function muunna(event) {
             break;
     }
 
-
 }
 
 function alerting() {
